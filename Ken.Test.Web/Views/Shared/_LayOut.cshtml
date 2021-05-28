@@ -1,0 +1,28 @@
+<html>
+
+<head>@ViewBag.title - 母版页显示</head>
+
+<body>
+    <div class="header">
+        <h1>weilei</h1>
+        <hr />
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <div class="footer">
+        <hr />
+        @if (IsSectionDefined("footer"))
+        {
+            RenderSection("footer");
+        }
+        else
+        {
+            <p>Layout footer</p>
+        }
+    </div>
+</body>
+
+</html>

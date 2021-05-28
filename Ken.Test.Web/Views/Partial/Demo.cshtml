@@ -1,0 +1,14 @@
+@{
+    ViewBag.title="PartialView Demo";
+}
+
+<h3>@ViewBag.title</h3>
+<p>PartialView Demo by weilei</p>
+
+@* //同步引用分部视图 *@
+@Html.Partial("_DatetimeInfo")
+
+<hr/>
+
+@* //异步引用分部视图 *@
+@await Html.PartialAsync("_DatetimeInfo")
